@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap');
+
+body {
+    background-color: black;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+.sinal-value-container {
+    padding: 0 1rem;
+    display: flex;
+    text-align: center;
+    margin: .5rem 0;
+}
+
+.sinal {
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+    width: 100%;
+    border-bottom: 2px solid white;
+    border-radius: 10px 0px 0px 10px;
+    background-color: gray;
+    padding: 1rem;
+}
+
+.valor {
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+    border-bottom: 2px solid white;
+    background: #363636;
+    padding: 1rem 0;
+}
+
+.loader {
+    width: 60px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+
+.ball {
+    list-style: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.ball:nth-child(1) {
+    animation: bounce-1 2.1s ease-in-out infinite;
+}
+
+@keyframes bounce-1 {
+    50% {
+        transform: translateY(-10px);
+        width: 3px;
+        height: 3px;
+    }
+}
+
+.ball:nth-child(2) {
+    animation: bounce-3 2.1s ease-in-out 0.3s infinite;
+}
+
+@keyframes bounce-2 {
+    50% {
+        transform: translateY(-10px);
+        width: 3px;
+        height: 3px;
+    }
+}
+
+.ball:nth-child(3) {
+    animation: bounce-3 2.1s ease-in-out 0.6s infinite;
+}
+
+@keyframes bounce-3 {
+    50% {
+        transform: translateY(-10px);
+        width: 3px;
+        height: 3px;
+    }
+}
+
+button {
+    margin: 0 1rem;
+    margin-top: .5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blocked {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.unblocked {
+    background: linear-gradient(300deg, #23d809, #126e05);
+    background-size: 180% 180%;
+    animation: gradient-animation 1.5s ease infinite;
+    cursor: pointer;
+}
+
+
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.aviator {
+    width: 300px;
+}
+
+.roleta {
+    width: 200px;
+}
+
+.wild-ape {
+    width: 250px;
+}
+
+.sweet {
+    width: 200px;
+}
+
+.imagemsinal2 {
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+    border-bottom: 2px solid white;
+    background: #363636;
+}
+
+.avatar2 {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.penalty {
+    width: 200px;
+    margin-top: 1rem;
+}
+
+.mines {
+    margin-bottom: .5rem;
+}
+
+.bacbo {
+    width: 210px;
+    margin-top: .5rem;
+}
+
+#imagem-aleatoria2 {
+    width:80px;
+    border-radius: 5px;
+}
+
+#imagem-aleatoria {
+    width:335px;
+    border-radius: 5px;
+}
+
+.planopremium {
+    padding: 0 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.link-planopremium {
+    text-decoration: none;
+    color: white;
+
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .pulsing {
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite;
+  }

@@ -1,0 +1,128 @@
+<html lang="en">
+
+
+<!-- Mirrored from obatagroup.com/fpexpert/fortune-tiger.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Aug 2024 13:31:51 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Tiger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link href="../../unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/reset.css">
+    <link rel="stylesheet" href="assets/style/design.css">
+    <link rel="stylesheet" href="jogo.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url(jogo/img/background-desktop-tiger.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        iframe {
+            width: 1500px;
+            height: 100%;
+            display: flex;
+            margin: 0rem auto;
+            border-radius: 10px;
+            margin-bottom: 6.5rem;
+        }
+
+        .sinal-container {
+            background: linear-gradient(184deg, rgba(27, 27, 27, 1) 0%, rgba(36, 31, 41, 1) 100%);
+            padding: 1rem 0;
+            border-radius: 10px 10px 0px 0px;
+            width: 370px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0rem auto;
+        }
+
+
+        @media (max-width: 767px) {
+
+            body {
+                background-image: url(jogo/img/fortune-tiger-background.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+
+
+            iframe {
+                width: 370px;
+                height: 100%;
+                display: flex;
+                margin: 0rem auto;
+                border-radius: 0px 0px 10px 10px;
+                margin-bottom: 6.5rem;
+            }
+
+            .sinal-container {
+                background: linear-gradient(184deg, rgba(27, 27, 27, 1) 0%, rgba(36, 31, 41, 1) 100%);
+                padding: 1rem 0;
+                border-radius: 10px 10px 0px 0px;
+                width: 370px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0rem auto;
+            }
+        }
+    </style>
+
+    <body>
+        <section class="header-test">
+            <a class="link-planopremium" href="index-2.html">
+                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                </svg>
+            </a>
+
+            <img class="avatar2" src="jogo/img/fortune-tiger-avatar.png" alt="Fortune Tiger">
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+        </section>
+        <section class="sinal-container">
+            <div class="sinal-value-container">
+                <p class="sinal">▶️ NORMAL</p>
+                <p class="valor" id="normal-valor">...</p>
+            </div>
+            <div class="sinal-value-container">
+                <p class="sinal">⚡️ TURBO</p>
+                <p class="valor" id="turbo-valor">...</p>
+            </div>
+            <div class="sinal-value-container">
+                <p class="sinal">⏰ MINUTO PAGANTE</p>
+                <p class="valor" id="minuto-valor">...</p>
+            </div>
+            <div class="sinal-value-container">
+                <p class="sinal">✅ ASSERTIVIDADE</p>
+                <p class="valor" id="assertividade-valor">...</p>
+            </div>
+            <button id="gerar-sinal" class="unblocked" onclick="gerarNovoSinal()">GERAR NOVO SINAL</button>
+        </section>
+        <iframe id="plataform" frameborder="0"></iframe>
+        <script defer src="links.js"></script>
+        <script src="jogo/script/slots.js"></script>
+        <script src="../../unpkg.com/aos%402.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+
+
+<!-- Mirrored from obatagroup.com/fpexpert/fortune-tiger.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Aug 2024 13:31:51 GMT -->
+</html>
