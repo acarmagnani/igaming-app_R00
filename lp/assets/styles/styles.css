@@ -1,0 +1,187 @@
+a {
+    text-decoration: none;
+    color: inherit;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --c-s1: rgba(214, 0, 186, .4);
+    --c-s2: rgb(14, 0, 143, .9);
+    --c-2: rgb(182, 182, 182);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column;
+    padding: 10px;
+    min-height: 100vh; /* Ensure the body stretches to fill the viewport */
+    margin: 0; /* Ensure there is no default margin */
+    
+    background-color: rgb(0, 0, 0);
+    background-image: 
+    radial-gradient(circle at bottom left,  var(--c-s1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    radial-gradient(circle at top right,  var(--c-s2), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background-size: cover; /* Adjust size as needed */
+    background-position: center center; /* Adjust position as needed */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-attachment: fixed; /* Fix the background */
+}
+
+html {
+    overflow-x: hidden;
+    height: 100%; /* Ensure html takes the full height */
+    margin: 0; /* Ensure there is no default margin */
+    padding: 0;
+}
+
+h1,h2,h3,b1,b2 {
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+h2 {
+    font-size: clamp(20px, 5vw, 30px);
+}
+
+b1 {
+    font-size: clamp(15px, 5vw, 20px);
+}
+
+.highlight {
+    color: rgb(39, 165, 67);
+    font-size: clamp(25px, 5vw, 35px);
+}
+
+
+.img {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    width: clamp(300px, 50vw, 600px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    width: clamp(150px, 25vw, 250px);
+}
+
+img {
+    flex: 1;
+    width: 0;
+    height: auto;
+}
+
+.txt-titulo {
+    text-align: center;
+}
+
+.container {
+    margin: 20px;
+    width: clamp(250px, 80vw, 600px);
+}
+
+.container-2 {
+    padding: 20px;
+
+    border: solid 1px var(--c-2);
+    border-radius: 30px;
+    background-color: rgb(141, 141, 141, .1);
+}
+
+.div {
+    width: 100%;
+    height: 1px;
+    background: var(--c-2);
+    margin: 20px 0px;
+}
+
+.botao {
+    border-radius: 80px;
+    padding: 10px;
+
+    border: solid 1px var(--c-2);
+    margin: 20px;
+    cursor: pointer;
+}
+
+.botao-txt {
+    border-radius: 70px;
+    padding: 15px 40px;
+
+    background-color: rgba(67, 255, 50, 0.3);
+
+    animation: glow 1.5s infinite;
+}
+
+.botao-txt:hover {
+    background-color: rgba(0, 151, 0, 0.3);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 30px rgba(52, 152, 219, 0.8); /* Initial glow */
+    }
+    50% {
+        box-shadow: 0 0 60px rgba(52, 152, 219, 1); /* Max glow */
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(52, 152, 219, 0.8); /* Return to initial glow */
+    }
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: clamp(250px, 80vw, 350px);
+    overflow: hidden;
+    margin: 0 auto; /* Center the carousel horizontally */
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
