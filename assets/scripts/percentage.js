@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setPercentage('mines', 90, 93, 'green');
     setPercentage('megaroleta', 93, 99, 'green');
     setPercentage('fortunedragon', 90, 95, 'green');
-    setPercentage('fortunetiger', 93, 93, 'green');
+    setPercentage('fortunetiger', 93, 95, 'green');
     setPercentage('fortunerabbit', 80, 87, 'green');
     setPercentage('fortunemouse', 30, 50, 'yellow');
     setPercentage('fortuneox', 90, 94, 'green');
