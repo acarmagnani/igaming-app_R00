@@ -162,7 +162,7 @@ b1 {
     margin: 20px 0px;
 }
 
-button {
+.button {
     border-radius: 80px;
     padding: 10px;
     background-color: rgba(67, 255, 50, 0.3);
