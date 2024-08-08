@@ -162,9 +162,10 @@ b1 {
     margin: 20px 0px;
 }
 
-.botao {
+button {
     border-radius: 80px;
     padding: 10px;
+    background-color: rgba(67, 255, 50, 0.3);
 
     border: solid 1px var(--c-2);
     margin: 20px;
@@ -174,8 +175,6 @@ b1 {
 .botao-txt {
     border-radius: 70px;
     padding: 15px 40px;
-
-    background-color: rgba(67, 255, 50, 0.3);
 
     animation: glow 1.5s infinite;
 }
@@ -189,10 +188,10 @@ b1 {
         box-shadow: 0 0 30px rgba(57, 219, 52, 0.8); /* Initial glow */
     }
     50% {
-        box-shadow: 0 0 60px rgba(52, 152, 219, 1); /* Max glow */
+        box-shadow: 0 0 60px rgba(57, 219, 52, 0.8);; /* Max glow */
     }
     100% {
-        box-shadow: 0 0 30px rgba(52, 152, 219, 0.8); /* Return to initial glow */
+        box-shadow: 0 0 30px rgba(57, 219, 52, 0.8); /* Return to initial glow */
     }
 }
 
