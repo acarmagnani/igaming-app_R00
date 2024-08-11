@@ -5,7 +5,7 @@ const links = {
     menu1: "#",
     menu2: "#",
     menu3: "#",
-    menu4: "https://chat.whatsapp.com/DrYbEugwSAbFI7ZsX0vdNc",
+    menu4: "https://chat.whatsapp.com/JKkVmYneL4TB3FDk8Gknme",
     footerText: "&copy; 2024 Hack Ninja. <br>All rights reserved.",
     sectionLink: "#"
 };
