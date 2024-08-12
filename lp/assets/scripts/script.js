@@ -1,3 +1,5 @@
+// CARROUSEL
+
 document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.getElementById('carousel');
     const images = carousel.children;
@@ -22,4 +24,34 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.carousel-control.prev').addEventListener('click', prevImage);
 
     setInterval(nextImage, 5000); // Change image every 5 seconds
+});
+
+
+// COUNTDOWN
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Function to show the pop-up
+    function showPopup() {
+        const popup = document.querySelector('.pop-up');
+        popup.style.display = 'block';
+    }
+
+    // Show the pop-up after 5 seconds
+    setTimeout(showPopup, 5000);
+
+    // Countdown functionality (previous code)
+    let count = 15;
+    const countdownElement = document.getElementById('countdown');
+
+    function updateCountdown() {
+        countdownElement.textContent = count;
+        count--;
+
+        if (count > 0) {
+            const randomDelay = Math.floor(Math.random() * 5000) + 5000;
+            setTimeout(updateCountdown, randomDelay);
+        }
+    }
+
+    updateCountdown(); // Start the countdown
 });

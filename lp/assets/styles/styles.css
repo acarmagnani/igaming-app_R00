@@ -59,6 +59,7 @@ h1 {
 
 h2 {
     font-size: clamp(20px, 5vw, 30px);
+    margin: 0;
 }
 
 b1 {
@@ -165,14 +166,15 @@ b1 {
 .button {
     border-radius: 80px;
     padding: 10px;
-    background-color: rgba(67, 255, 50, 0.3);
 
-    border: solid 1px var(--c-2);
     margin: 20px;
     cursor: pointer;
 }
 
 .botao-txt {
+    background-color: rgba(67, 255, 50, 0.3);
+    border: solid 1px var(--c-2);
+
     border-radius: 70px;
     padding: 15px 40px;
 
@@ -236,4 +238,25 @@ b1 {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.pop-up {
+    position: fixed; /* Fix the pop-up to the top */
+    top: 0; /* Align to the top of the page */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for the width of the element */
+    z-index: 1000; /* Ensure it's above other elements */
+    margin-top: 30px;
+
+    border: solid 1px var(--c-2);
+    border-radius: 30px;
+    background-color: red;
+
+    display: none;
+}
+
+.pop-up_txt {
+    text-align: center; /* Center the text inside the pop-up */
+    padding: 20px 20px;
+    width: clamp(250px, 80vw, 350px);
 }
