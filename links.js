@@ -1,5 +1,5 @@
 const links = {
-    plataform: "https://elisahack.com/hackninja/user/fast-login",
+    plataform: "https://go.aff.elisa.bet/pbs688xc",
     kirvano: "#",
     menu1: "#",
     menu2: "#",
