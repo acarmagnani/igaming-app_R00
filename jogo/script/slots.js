@@ -18,6 +18,10 @@ function gerarNovoSinal() {
     const botao = document.getElementById('gerar-sinal');
     botao.textContent = 'ANALISANDO...';
 
+    // Disable the "link-plataforma" button while blocked
+    const botaoPlataforma = document.getElementById('link-plataforma');
+    botaoPlataforma.disabled = true;
+
     setTimeout(() => {
         const valorNormal = gerarNumeroAleatorio(2, 7);
         document.getElementById('normal-valor').textContent = `${valorNormal}x`;
@@ -35,9 +39,15 @@ function gerarNovoSinal() {
         const valorAssertividade = formatarNumero(gerarNumeroAleatorio(90, 93) + Math.random(), 2);
         document.getElementById('assertividade-valor').textContent = `${valorAssertividade}%`;
 
+        // Desbloquear o botão "link-plataforma" e mudar sua classe para "unblocked"
+        botaoPlataforma.classList.remove('blocked');
+        botaoPlataforma.classList.add('unblocked');
+        botaoPlataforma.disabled = false;  // Enable the button when unblocked
+
         bloquearBotao();
-    }, 4000); // Delay de 2 segundos
+    }, 4000); // Delay de 4 segundos
 }
+
 
 function bloquearBotao() {
     const botao = document.getElementById('gerar-sinal');

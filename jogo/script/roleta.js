@@ -29,12 +29,19 @@ function gerarNovoSinal() {
     const botao = document.getElementById('gerar-sinal');
     botao.textContent = 'ANALISANDO...';
 
+    // Disable the "link-plataforma" button while blocked
+    const botaoPlataforma = document.getElementById('link-plataforma');
+    botaoPlataforma.disabled = true;
+
     // Adicionar um pequeno delay para simular o carregamento
     setTimeout(() => {
-        // Gerar valores para NORMAL e TURBO
-        const [valorNormal, valorTurbo] = gerarNumeroAleatorioNormalETurbo();
-        document.getElementById('normal-valor').textContent = `${valorNormal}`;
-        document.getElementById('turbo-valor').textContent = `${valorTurbo}`;
+        // Gerar valor para NORMAL
+        const valorNormal = gerarNumeroAleatorio(1.3, 3);
+        document.getElementById('normal-valor').textContent = `${valorNormal}x`;
+
+        // Gerar valor para TURBO
+        const valorTurbo = gerarNumeroAleatorio(1, 3);
+        document.getElementById('turbo-valor').textContent = `${valorTurbo}x`;
 
         // Gerar valor para MINUTO PAGANTE
         const agora = new Date();
@@ -47,7 +54,12 @@ function gerarNovoSinal() {
         const valorAssertividade = formatarNumero(gerarNumeroAleatorio(80, 90) + Math.random(), 2);
         document.getElementById('assertividade-valor').textContent = `${valorAssertividade}%`;
 
-        // Bloquear botão
+        // Desbloquear o botão "link-plataforma" e mudar sua classe para "unblocked"
+        botaoPlataforma.classList.remove('blocked');
+        botaoPlataforma.classList.add('unblocked');
+        botaoPlataforma.disabled = false;  // Enable the button when unblocked
+
+        // Bloquear botão "gerar-sinal"
         bloquearBotao();
     }, 4000); // Delay de 4 segundos
 }

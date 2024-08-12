@@ -56,6 +56,12 @@ function gerarNovoSinal() {
     const botao = document.getElementById('gerar-sinal');
     botao.textContent = 'ANALISANDO...';
 
+    // Temporarily block the link button
+    const linkBotao = document.getElementById('link-plataforma');
+    linkBotao.classList.remove('unblocked');
+    linkBotao.classList.add('blocked');
+    linkBotao.disabled = true; // Prevent clicking the button
+
     setTimeout(() => {
         const [valorNormal, valorTurbo] = gerarNumeroAleatorioNormalETurbo();
         document.getElementById('normal-valor').textContent = obterTimeAleatorio(); // Exibe o nome do time aleatório
@@ -72,6 +78,11 @@ function gerarNovoSinal() {
 
         const imagemAleatoria = obterImagemAleatoria();
         document.getElementById('imagem-aleatoria').src = imagemAleatoria;
+
+        // Unblock the link button after generating the new signal
+        linkBotao.classList.remove('blocked');
+        linkBotao.classList.add('unblocked');
+        linkBotao.disabled = false; // Allow clicking the button again
 
         bloquearBotao();
     }, 4000);

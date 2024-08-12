@@ -18,6 +18,12 @@ function gerarNovoSinal() {
     const botao = document.getElementById('gerar-sinal');
     botao.textContent = 'ANALISANDO...';
 
+    // Temporarily block the link button
+    const linkBotao = document.getElementById('link-plataforma');
+    linkBotao.classList.remove('unblocked');
+    linkBotao.classList.add('blocked');
+    linkBotao.disabled = true; // Prevent clicking the button
+
     setTimeout(() => {
         const valorNormal = gerarNumeroAleatorio(2, 7);
         document.getElementById('normal-valor').textContent = `${valorNormal}x`;
@@ -35,9 +41,15 @@ function gerarNovoSinal() {
         const valorAssertividade = formatarNumero(gerarNumeroAleatorio(98, 99) + Math.random(), 2);
         document.getElementById('assertividade-valor').textContent = `${valorAssertividade}%`;
 
+        // Unblock the link button after generating the new signal
+        linkBotao.classList.remove('blocked');
+        linkBotao.classList.add('unblocked');
+        linkBotao.disabled = false; // Allow clicking the button again
+
         bloquearBotao();
-    }, 4000); // Delay de 2 segundos
+    }, 4000); // Delay de 4 segundos
 }
+
 
 function bloquearBotao() {
     const botao = document.getElementById('gerar-sinal');
