@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Show the pop-up after 5 seconds
-    setTimeout(showPopup, 5000);
+    setTimeout(showPopup, 3000);
 
     // Countdown functionality (previous code)
-    let count = 15;
+    let count = 9;
     const countdownElement = document.getElementById('countdown');
 
     function updateCountdown() {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         count--;
 
         if (count > 0) {
-            const randomDelay = Math.floor(Math.random() * 5000) + 5000;
+            const randomDelay = Math.floor(Math.random() * 4000) + 4000;
             setTimeout(updateCountdown, randomDelay);
         }
     }

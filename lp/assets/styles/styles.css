@@ -176,7 +176,7 @@ b1 {
     border: solid 1px var(--c-2);
 
     border-radius: 70px;
-    padding: 15px 40px;
+    padding: 25px 50px;
 
     animation: glow 1.5s infinite;
 }
