@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         count--;
 
         if (count > 0) {
-            const randomDelay = Math.floor(Math.random() * 3000) + 2000;
+            const randomDelay = Math.floor(Math.random() * 2000) + 2000;
             setTimeout(updateCountdown, randomDelay);
         }
     }
